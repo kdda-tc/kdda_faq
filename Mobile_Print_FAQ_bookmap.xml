@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                    xsi:noNamespaceSchemaLocation="../../com.kyocera.doctypes/map/xsd/kdda-map.xsd" 
+                    class="- map/map " 
+                    id="mobile_print_faq_map" 
+                    translate="yes"
+                    xml:lang="en-US"
+                    chunk="to-content">
+	<title class="- map/title " translate="yes">KYOCERA Mobile Print FAQ</title>
+	<topicref navtitle="general" type="concept" translate="yes" class="- map/topicref " href="topics/Mobile_Print/Mobile_Print_FAQ/Mobile_Print_FAQ_general.xml"/>
+	<topicref navtitle="hardware" type="concept" translate="yes" class="- map/topicref " href="topics/Mobile_Print/Mobile_Print_FAQ/Mobile_Print_FAQ_hardware-OS.xml" />
+	<topicref navtitle="prinscan" type="concept" translate="yes" class="- map/topicref " href="topics/Mobile_Print/Mobile_Print_FAQ/Mobile_Print_FAQ_print-scan.xml"/>
+	<topicref navtitle="network" type="concept" translate="yes" class="- map/topicref " href="topics/Mobile_Print/Mobile_Print_FAQ/Mobile_Print_FAQ_discovery-network.xml"/>
+	<topicref navtitle="email" type="concept" translate="yes" class="- map/topicref " href="topics/Mobile_Print/Mobile_Print_FAQ/Mobile_Print_FAQ_email-web.xml"/>
+	<topicref navtitle="trouble" type="concept" translate="yes" class="- map/topicref " href="topics/Mobile_Print/Mobile_Print_FAQ/Mobile_Print_FAQ_troubleshooting.xml"/>
+</map>

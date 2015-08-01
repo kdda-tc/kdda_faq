@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="com.kdda.html-faq" 
+               default="html-faq" 
+               basedir=".">
+
+  <property name="dita.dir" location="C:/DITA-OT2.1.0"/>
+
+  <target name="html-faq">
+
+    <ant antfile="${dita.dir}${file.separator}build.xml">
+      <property name="args.input" 
+                         value="Mobile_Print_FAQ_bookmap.xml"/>
+      <property name="clean.temp"
+                         value="no"/>
+      <property name="args.xsl"
+                         value="mobile_faq.xsl"/>
+      <property name="transtype" value="xhtml"/>
+    </ant>
+  </target>
+
+</project>

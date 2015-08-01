@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                 xsi:noNamespaceSchemaLocation="../../../../../com.kyocera.doctypes/concept/xsd/kdda-concept.xsd" 
+                 translate="yes" 
+                 class="- topic/topic concept/concept" 
+                 id="general"
+                 xml:lang="en-US">
+	<title translate="yes" class="- topic/title ">General</title>
+	<conbody class="- topic/body concept/conbody">
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">What is KYOCERA Mobile Print?</p>
+			<p translate="yes" class="- topic/p ">KYOCERA Mobile Print is a convenient app for iOS and Android that lets you use your mobile device to connect wirelessly to compatible KYOCERA printing devices and MFPs on your local area network. When connected, you can do the following:</p>
+			<ul translate="yes" class="- topic/ul ">
+				<li translate="yes" class="- topic/li ">
+					<p translate="yes" class="- topic/p ">Print photos and documents stored on your mobile device.</p>
+				</li>
+				<li translate="yes" class="- topic/li ">
+					<p translate="yes" class="- topic/p ">Scan documents on a compatible MFP and save them to your mobile device.</p>
+				</li>
+				<li translate="yes" class="- topic/li ">
+					<p translate="yes" class="- topic/p ">Send documents by e-mail.</p>
+				</li>
+				<li translate="yes" class="- topic/li ">
+					<p translate="yes" class="- topic/p ">Print webpages accessed through the app's built-in web browser.</p>
+				</li>
+			</ul>
+		</section>
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">Where can I download KYOCERA Mobile Print?</p>
+			<p translate="yes" class="- topic/p ">The app is available for download from the iTunes App Store (for iOS devices) and Google Play (for Android devices).</p>
+		</section>
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">How much does KYOCERA Mobile Print cost?</p>
+			<p translate="yes" class="- topic/p ">The app is free.</p>
+		</section>
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">Which languages are supported by KYOCERA Mobile Print?</p>
+			<p translate="yes" class="- topic/p ">KYOCERA Mobile Print supports English, French, German, Italian, Japanese, Korean, Portuguese, Simplified Chinese, Traditional Chinese, and Spanish. The app automatically displays in the same language as that set in your mobile device’s system settings. If your mobile device is set to a language other than the supported languages listed above, the app will display in English.</p>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                 xsi:noNamespaceSchemaLocation="../../../../../com.kyocera.doctypes/concept/xsd/kdda-concept.xsd" 
+                 translate="yes" 
+                 class="- topic/topic concept/concept" 
+                 id="email"
+                 xml:lang="en-US">
+	<title translate="yes" class="- topic/title ">E-mailing and web browsing</title>
+	<conbody class="- topic/body concept/conbody">
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">How does KYOCERA Mobile Print work with e-mail? </p>
+			<p translate="yes" class="- topic/p ">You can send e-mails with document or image attachments from within the app if your device is properly configured to send and receive e-mails.</p>
+		</section>
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">How do I print an e-mail attachment?</p>
+			<p translate="yes" class="- topic/p ">To print an e-mail attachment, you must import the file to the app to make it available for printing. <i translate="yes" class="+ topic/ph hi-d/i ">(For further details, see topic “Can I import files to the app?” above.)</i>
+			</p>
+		</section>
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">How does KYOCERA Mobile Print handle web browsing?</p>
+			<p translate="yes" class="- topic/p ">KYOCERA Mobile Print has a built-in web browser for accessing the Internet. You can print webpages accessed through the browser.</p>
+		</section>
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">Can I print from my online accounts, such as free e-mail accounts or cloud-based services?</p>
+			<p translate="yes" class="- topic/p ">You can print in-line text, but not file attachments or files that are in cloud-based storage, such as Evernote or Google Documents.</p>
+		</section>
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">Does the built-in web browser support bookmarking?</p>
+			<p translate="yes" class="- topic/p ">In the app’s built-in web browser, you can bookmark pages you wish to save. To bookmark a page, tap the <uicontrol translate="yes" class="+ topic/ph ui-d/uicontrol ">Add</uicontrol> icon in the address bar. You may edit the title of the bookmark, but not the URL. The bookmark title can be up to 100 characters in length. To view existing bookmarks, tap the <uicontrol translate="yes" class="+ topic/ph ui-d/uicontrol ">Bookmark</uicontrol> icon next to the address bar.</p>
+		</section>
+		<section translate="yes" class="- topic/section ">
+			<p translate="yes" class="- topic/p ">Does the app's built-in web browser support the use of proxy environments?</p>
+			<p translate="yes" class="- topic/p ">Proxy environments are only supported on mobile devices running Android version 3.1 and above.</p>
+		</section>
+	</conbody>
+</concept>
