@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:redefine schemaLocation="kddaTopicConstraintInt.xsd">
+    <!-- constrain content of <p> element -->
+    <xs:group name="p.content">    
+      <xs:choice>
+        <xs:group ref="kdda-p.content"/>
+      </xs:choice>            
+    </xs:group>
+  </xs:redefine>
+
+</xs:schema>

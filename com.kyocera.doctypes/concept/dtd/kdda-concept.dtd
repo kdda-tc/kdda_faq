@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================== -->
+<!--                                         HEADER                                           -->
+<!-- ================================================== -->
+<!--  MODULE:    DITA Concept DTD                                            -->
+<!--  VERSION:   1.2                                                                        -->
+<!--  DATE:      July 2015                                                                -->
+<!--  Copyright (c) 2015 KYOCERA Document Solutions Inc.   -->
+<!-- ================================================== -->
+
+
+<!-- ===================================================== -->
+<!--                    TOPIC ENTITY DECLARATIONS                  -->
+<!-- ===================================================== -->
+
+<!ENTITY % concept-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Concept//EN" 
+         "concept.ent"
+>%concept-dec;
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ===================================================== -->
+
+<!ENTITY % hi-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Highlight Domain//EN" 
+         "../../base/dtd/highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ui-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 User Interface Domain//EN" 
+         "uiDomain.ent"                                                       
+>%ui-d-dec;
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ===================================================== -->
+
+<!ATTLIST concept xmlns:xsi CDATA #IMPLIED
+                                 xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+>
+
+<!-- ===================================================== -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ===================================================== -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+
+<!ENTITY % pre          "pre |
+                         %ui-d-pre;
+                        ">
+<!ENTITY % keyword      "keyword |
+                         %ui-d-keyword;
+                        ">
+<!ENTITY % ph           "ph |
+                         %hi-d-ph; |
+                         %ui-d-ph;
+                        ">
+<!ENTITY % term         "term
+                        ">
+<!ENTITY % fig          "fig
+                        ">
+<!ENTITY % dl           "dl
+                        ">
+<!ENTITY % index-base   "index-base
+                        ">
+<!ENTITY % note         "note
+                        ">
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ===================================================== -->
+<!ENTITY % props-attribute-extensions  ""                            >
+<!ENTITY % base-attribute-extensions   ""                            >
+
+
+<!-- ===================================================== -->
+<!--                    TOPIC NESTING OVERRIDE                     -->
+<!-- ===================================================== -->
+
+<!--                    Redefine the infotype entity to exclude 
+                        other topic types and disallow nesting     -->
+<!ENTITY % concept-info-types 
+                        "concept"                                    >
+
+
+<!-- ===================================================== -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ===================================================== -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+
+<!ENTITY included-domains 
+                          "&concept-att;
+                           &hi-d-att; 
+                           &ui-d-att; 
+                           &concept-constraints;
+  "
+>
+
+<!-- ===================================================== -->
+<!--                    CONTENT CONSTRAINT INTEGRATION             -->
+<!-- ===================================================== -->
+
+<!ENTITY % kddaConcept-c-def  
+  SYSTEM "../../kddaConceptConstraint/dtd/kddaConceptConstraint.mod">
+%kddaConcept-c-def;
+
+<!-- ===================================================== -->
+<!--                    TOPIC ELEMENT INTEGRATION                  -->
+<!-- ===================================================== -->
+
+<!--                    Embed topic to get generic elements        -->
+<!ENTITY % topic-type   PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 Topic//EN" 
+"../../base/dtd/topic.mod">
+%topic-type;
+
+<!--                    Embed concept to get specific elements     -->
+<!ENTITY % concept-typemod 
+                        PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 Concept//EN" 
+"concept.mod">
+%concept-typemod;
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ===================================================== -->
+
+
+<!ENTITY % hi-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Highlight Domain//EN" 
+         "../../base/dtd/highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % ui-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 User Interface Domain//EN" 
+         "uiDomain.mod"
+>%ui-d-def;
+
+<!-- ============== End DITA Concept DTD  ================== -->

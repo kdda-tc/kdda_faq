@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+                 prefer="public">
+  
+  <public publicId="urn:pubid:kyocera.com:doctypes:dita:kdda-topic"
+                 uri="kdda-topic.dtd"/>
+
+  <public publicId="urn:pubid:kyocera.com:doctypes:dita:kdda-topic.dtd"
+                 uri="kdda-topic.dtd"/>
+
+</catalog>

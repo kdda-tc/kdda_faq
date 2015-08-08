@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task SYSTEM "dtd/kdda-task.dtd">
+<task id="test_kdda_task" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="xsd/kdda-task.xsd"
+      translate="yes"
+      xml:lang="en">
+  <title translate="yes">Topic title</title>
+  <taskbody>
+    <context>
+      <p translate="yes">A paragraph in a section.</p>
+      <sl>
+        <sli translate="yes">Simple 1 with <b translate="yes">bold</b>, <i translate="yes">italic</i>, and <uicontrol translate="yes">uicontrol</uicontrol> stuff in it.</sli>
+        <sli translate="yes">Simple 2</sli>
+      </sl>
+      <note translate="yes">This is a note.</note>
+      <p translate="yes">Topic paragraph with <b translate="yes">bold</b>, <i translate="yes">italic</i>, and <uicontrol translate="yes">uicontrol</uicontrol> stuff in it.</p>
+    <sl>
+      <sli translate="yes">Simple 1 with <b translate="yes">bold</b>, <i translate="yes">italic</i>, and <uicontrol translate="yes">uicontrol</uicontrol> stuff in it.</sli>
+      <sli translate="yes">Simple 2</sli>
+    </sl>
+    </context>
+    
+    <steps>
+      <step>
+        <cmd translate="yes">Click <uicontrol translate="yes">Reports</uicontrol> in the toolbar.</cmd>
+      </step>
+      <step>
+        <cmd translate="yes">In the Search text box, type a search value appropriate for the selected category: <uicontrol translate="yes">Report name</uicontrol>, <uicontrol translate="yes">Name</uicontrol>, or <uicontrol translate="yes">Size</uicontrol>. You can filter other categories based on the following values:</cmd>
+        <info>
+          <p translate="yes"> 
+            <uicontrol translate="yes">Set Priority</uicontrol>: <uicontrol translate="yes">High</uicontrol>, <uicontrol translate="yes">Medium</uicontrol>, <uicontrol translate="yes">Low</uicontrol>, <uicontrol translate="yes">Clear</uicontrol> 
+          </p>
+          <p translate="yes"> 
+            <uicontrol translate="yes">Report Items</uicontrol>: <uicontrol>Devices</uicontrol>, <uicontrol>Groups</uicontrol> 
+          </p>
+          <p translate="yes"> 
+            <uicontrol translate="yes">Generated (Later than)</uicontrol> and <uicontrol translate="yes">Generated (Recent)</uicontrol>: <uicontrol translate="yes">24 hours</uicontrol>, <uicontrol translate="yes">7 days</uicontrol>, <uicontrol translate="yes">14 days</uicontrol>, <uicontrol translate="yes">30 days</uicontrol> 
+          </p>
+        </info>
+      </step>
+      <step>
+        <cmd translate="yes">Click the magnifying glass.</cmd>
+        <substeps>
+          <substep>
+            <cmd translate="yes"> 
+              <uicontrol translate="yes">Status</uicontrol>: <uicontrol translate="yes">On hold</uicontrol>, <uicontrol translate="yes">Waiting</uicontrol>, <uicontrol translate="yes">Processing</uicontrol>, <uicontrol translate="yes">Completed</uicontrol>, <uicontrol>Failed</uicontrol>, <uicontrol translate="yes">Canceled</uicontrol>.</cmd>
+          </substep>
+          <substep>
+            <cmd translate="yes"> 
+              <uicontrol translate="yes">Timestamp (Later than)</uicontrol> and <uicontrol translate="yes">Timestamp (Recent)</uicontrol>: <uicontrol translate="yes">24 hours</uicontrol>, <uicontrol>7 days</uicontrol>, <uicontrol translate="yes">14 days</uicontrol>, <uicontrol translate="yes">30 days</uicontrol> 
+            </cmd>
+          </substep>
+        </substeps>
+      </step>
+    </steps>
+    <result translate="yes">
+      <p translate="yes">User information can be edited by selecting a user and clicking <uicontrol>Edit</uicontrol>.</p>
+    </result>
+    <postreq translate="yes">
+      <p>To clear the search term, click the x in the text box. This removes any text in the search box and restores the view to the original list.</p>
+    </postreq>
+  </taskbody>
+</task>

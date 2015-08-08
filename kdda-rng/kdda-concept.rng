@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <start>
+    <ref name="concept"/>
+  </start>
+
+  <define name="concept">
+    <element name="concept"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <attribute name="xsi:noNamespaceSchemaLocation">
+        <text/>
+      </attribute>
+      <attribute name="id">
+        <text/>
+      </attribute>
+      <ref name="baseAttrs"/>
+      <optional>
+        <attribute name="xml:lang">
+          <text/>
+        </attribute>
+      </optional>
+      <ref name="title"/>
+      <optional>
+        <ref name="shortdesc"/>
+      </optional>
+      <ref name="conbody"/>
+    </element>
+  </define>
+
+  <define name="title">
+    <element name="title">
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="shortdesc">
+    <element name="shortdesc">
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="conbody">
+    <element name="conbody">
+      <attribute name="class">
+        <text/>
+      </attribute>
+      <interleave>
+        <oneOrMore>
+          <ref name="p"/>
+        </oneOrMore>
+        <zeroOrMore>
+          <ref name="ul"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="sl"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="note"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="sl">
+    <element name="sl">
+      <oneOrMore>
+        <ref name="sli"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="sli">
+    <element name="sli">
+      <ref name="baseAttrs"/>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="uicontrol"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="ul">
+    <element name="ul">
+      <oneOrMore>
+        <ref name="li"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="li">
+    <element name="li">
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="note">
+    <element name="note">
+      <attribute name="type">
+        <text/>
+      </attribute>
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="p">
+    <element name="p">
+      <ref name="baseAttrs"/>
+      <interleave>
+        <zeroOrMore>
+          <ref name="b"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="i"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="uicontrol"/>
+        </zeroOrMore>
+        <text/>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="b">
+    <element name="b">
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="i">
+    <element name="i">
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="uicontrol">
+    <element name="uicontrol">
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="baseAttrs">
+    <attribute name="class">
+      <text/>
+    </attribute>
+    <attribute name="translate">
+      <text/>
+    </attribute>
+  </define>
+
+</grammar>

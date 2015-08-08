@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+                prefer="public">
+
+  <nextCatalog catalog="base/catalog.xml"/>
+  <nextCatalog catalog="concept/catalog.xml"/>
+  <nextCatalog catalog="task/catalog.xml"/>
+  <nextCatalog catalog="topic/catalog.xml"/>
+  <nextCatalog catalog="map/catalog.xml"/>
+  <nextCatalog catalog="kddaConceptConstraint/catalog.xml"/>
+  <nextCatalog catalog="kddaTaskConstraint/catalog.xml"/>
+  <nextCatalog catalog="kddaTopicConstraint/catalog.xml"/>
+
+</catalog>

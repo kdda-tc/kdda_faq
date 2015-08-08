@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "dtd/kdda-topic.dtd">
+<topic id="test_kdda_topic"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:noNamespaceSchemaLocation="xsd/kdda-topic.xsd"
+       translate="yes"
+       xml:lang="en">
+  <title translate="yes">Topic title</title>
+  <shortdesc translate="yes">And a short description of our topic.</shortdesc>
+  <body>
+    <p translate="yes">Topic paragraph with with plain text in it.</p>
+    <p translate="yes">And another paragraph.</p>
+  </body>
+</topic>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===================================================== -->
+<!--                    HEADER                                                                    -->
+<!-- ===================================================== -->
+<!--  MODULE:    DITA Topic DTD                                                     -->
+<!--  VERSION:    1.2                                                                           -->
+<!--  DATE:          July 2015                                                                 -->
+<!--  Copyright (c) 2015 KYOCERA Document Solutions Inc.        -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!--                    TOPIC ENTITY DECLARATIONS                  -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ===================================================== -->
+
+<!ENTITY % hi-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Highlight Domain//EN" 
+         "../../base/dtd/highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ui-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 User Interface Domain//EN" 
+         "uiDomain.ent"                                                       
+>%ui-d-dec;
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ===================================================== -->
+
+<!ATTLIST topic xmlns:xsi CDATA #IMPLIED
+                           xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+>
+
+<!-- ===================================================== -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ===================================================== -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+
+<!ENTITY % pre          "pre
+                        ">
+<!ENTITY % keyword      "keyword
+                        ">
+<!ENTITY % ph           "ph | 
+                         %hi-d-ph;
+                        ">
+<!ENTITY % term         "term 
+                        ">
+<!ENTITY % fig          "fig 
+                        ">
+<!ENTITY % dl           "dl 
+                        ">
+<!ENTITY % index-base   "index-base 
+                        ">
+<!ENTITY % note         "note 
+                        ">
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ===================================================== -->
+<!ENTITY % props-attribute-extensions  
+  ""
+>
+<!ENTITY % base-attribute-extensions   
+  ""
+>
+
+<!-- ===================================================== -->
+<!--                    TOPIC NESTING OVERRIDE                     -->
+<!-- ===================================================== -->
+
+<!--                    Redefine the infotype entity to exclude 
+                        other topic types and disallow nesting     -->
+<!ENTITY % topic-info-types 
+  "topic
+  "
+>
+
+<!-- ===================================================== -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ===================================================== -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+
+<!ENTITY included-domains 
+                          "&hi-d-att; 
+                           &topic-constraints;
+  "
+>
+
+<!-- ===================================================== -->
+<!--                    CONTENT CONSTRAINT INTEGRATION             -->
+<!-- ===================================================== -->
+
+<!ENTITY % kddaTopic-c-def  
+  SYSTEM "../../kddaTopicConstraint/dtd/kddaTopicConstraint.mod">
+%kddaTopic-c-def;
+
+<!-- ===================================================== -->
+<!--                    TOPIC ELEMENT INTEGRATION                  -->
+<!-- ===================================================== -->
+
+<!--                    Embed topic to get generic elements        -->
+<!ENTITY % topic-type   
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Topic//EN" 
+         "../../base/dtd/topic.mod"
+>
+%topic-type;
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ===================================================== -->
+
+<!ENTITY % hi-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Highlight Domain//EN" 
+         "../../base/dtd/highlightDomain.mod"
+>%hi-d-def;
+
+<!-- ================== End DITA Task DTD ================= -->

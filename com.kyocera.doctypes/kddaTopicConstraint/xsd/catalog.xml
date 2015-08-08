@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+                prefer="public">
+
+  <public publicId="urn:pubid:kyocera.com:doctypes:dita:kddaTopicConstraint"
+                 uri="kddaTopicConstraint.xsd"/>
+
+  <public publicId="urn:pubid:kyocera.com:doctypes:dita:kddaTopicConstraint.xsd"
+                 uri="kddaTopicConstraint.xsd"/>
+
+  <public publicId="urn:pubid:kyocera.com:doctypes:dita:kddaTopicConstraintInt"
+                 uri="kddaTopicConstraintInt.xsd"/>
+
+  <public publicId="urn:pubid:kyocera.com:doctypes:dita:kddaTopicConstraintInt.xsd"
+                 uri="kddaTopicConstraintInt.xsd"/>
+
+</catalog>

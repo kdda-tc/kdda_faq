@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <start>
+    <ref name="topic"/>
+  </start>
+
+  <define name="topic">
+    <element name="topic"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <attribute name="xsi:noNamespaceSchemaLocation">
+        <text/>
+      </attribute>
+      <attribute name="id">
+        <text/>
+      </attribute>
+      <ref name="baseAttrs"/>
+      <optional>
+        <attribute name="xml:lang">
+          <text/>
+        </attribute>
+      </optional>
+      <ref name="title"/>
+      <ref name="body"/>
+    </element>
+  </define>
+
+  <define name="title">
+    <element name="title">
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="body">
+    <element name="body">
+      <oneOrMore>
+        <ref name="p"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="p">
+    <element name="p">
+      <ref name="baseAttrs"/>
+      <interleave>
+        <zeroOrMore>
+          <ref name="tm"/>
+        </zeroOrMore>
+        <text/>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="tm">
+    <element name="tm">
+      <attribute name="tmtype"/>
+      <attribute name="class"/>
+    </element>
+  </define>
+
+  <define name="baseAttrs">
+    <attribute name="class">
+      <text/>
+    </attribute>
+    <attribute name="translate">
+      <text/>
+    </attribute>
+  </define>
+
+</grammar>

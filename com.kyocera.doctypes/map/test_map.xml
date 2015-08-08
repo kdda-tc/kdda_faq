@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "dtd/kdda-map.dtd">
+<map id="test_kdda_map"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="xsd/kdda-map.xsd"
+      translate="yes"
+      xml:lang="en">
+  <title translate="yes">Map title</title>
+  <topicref navtitle="navtitle" class="- map/topicref " href="catalog.xml">
+    <topicref navtitle="navtitle" class="- map/topicref " href="catalog.xml"/>
+    <topicref navtitle="navtitle" class="- map/topicref " href="catalog.xml"/>
+  </topicref>
+  <topicref navtitle="navtitle" class="- map/topicref " href="catalog.xml">
+    <topicref navtitle="navtitle" class="- map/topicref " href="catalog.xml">
+      <topicref navtitle="navtitle" class="- map/topicref " href="catalog.xml"/>
+    </topicref>
+  </topicref>
+</map>

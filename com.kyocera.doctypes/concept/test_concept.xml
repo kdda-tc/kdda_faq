@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept SYSTEM "dtd/kdda-concept.dtd">
+<concept id="test_kdda_concept"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:noNamespaceSchemaLocation="xsd/kdda-concept.xsd"
+         translate="yes"
+         xml:lang="en">
+  <title translate="yes" class="- topic/title ">Concept Title</title>
+  <shortdesc translate="yes">This is a Concept.</shortdesc>
+  <conbody class="- topic/body concept/conbody ">
+    <p translate="yes" class="- topic/p ">Concept paragraph with <b>bold</b>, <i>italic</i>, and <uicontrol translate="yes">uicontrol</uicontrol> stuff in it.</p>
+    <ul>
+      <li translate="yes">Item 1 with <b>bold</b>, <i>italic</i>, and <uicontrol>uicontrol</uicontrol> stuff in it.</li>
+      <li translate="yes">Item 2</li>
+      <li><p translate="yes">Paragraph in an <uicontrol>item</uicontrol></p></li>
+    </ul>
+    <sl>
+      <sli translate="yes">Simple 1 with <b>bold</b>, <i>italic</i>, and <uicontrol translate="yes">uicontrol</uicontrol> stuff in it.</sli>
+      <sli translate="yes">Simple 2</sli>
+    </sl>
+    <note type="note" translate="yes">This is a note.</note>
+  </conbody>
+</concept>

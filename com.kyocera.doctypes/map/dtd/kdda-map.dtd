@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================== -->
+<!--                                         HEADER                                           -->
+<!-- ================================================== -->
+<!--  MODULE:    DITA Map DTD                                                  -->
+<!--  VERSION:   1.2                                                                        -->
+<!--  DATE:      July 2015                                                                -->
+<!--  Copyright (c) 2015 KYOCERA Document Solutions Inc.   -->
+<!-- ================================================== -->
+
+<!-- ================================================== -->
+<!--                    MAP ENTITY DECLARATIONS                    -->
+<!-- ================================================== -->
+
+<!-- ================================================== -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ================================================== -->
+
+<!ENTITY % mapgroup-d-dec 
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Map Group Domain//EN" 
+         "../../base/dtd/mapGroup.ent"                                                       
+>%mapgroup-d-dec;
+
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ===================================================== -->
+
+<!ATTLIST map xmlns:xsi CDATA #IMPLIED
+                                 xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+>
+
+<!-- ================================================== -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ================================================== -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+<!ENTITY % keywords     "keywords
+                        ">
+<!ENTITY % topicref     "topicref | 
+                         (%mapgroup-d-topicref;)
+                        ">
+<!ENTITY % index-base   "index-base
+                        ">
+<!ENTITY % keyword      "keyword 
+                        ">
+<!ENTITY % pre          "pre
+                        ">
+<!ENTITY % ph           "ph 
+                        ">
+<!ENTITY % term         "term
+                        ">
+<!ENTITY % fig          "fig 
+                        ">
+<!ENTITY % dl           "dl
+                        ">
+<!ENTITY % note         "note 
+                        ">
+
+<!-- ================================================== -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ================================================== -->
+<!ENTITY % props-attribute-extensions  
+  ""
+>
+<!ENTITY % base-attribute-extensions   
+  ""
+>
+
+<!-- ================================================== -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ================================================== -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+
+<!ENTITY included-domains 
+                        "&mapgroup-d-att;
+                          &map-constraints;
+                        ">
+
+<!-- ===================================================== -->
+<!--                   MAP CONSTRAINT INTEGRATION                    -->
+<!-- ===================================================== -->
+
+<!ENTITY % kddaMap-c-def  
+  SYSTEM "../../kddaMapConstraint/dtd/kddaMapConstraint.mod">
+%kddaMap-c-def;
+
+<!-- ================================================== -->
+<!--                    MAP ELEMENT INTEGRATION                    -->
+<!-- ================================================== -->
+
+<!--                    Embed map to get generic elements          -->
+<!--    2005.11.15 RDA: Corrected public ID for map.mod. It was    -->
+<!--             "-//OASIS//Elements DITA Map Group Domain//EN"    -->
+<!ENTITY % map-type     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Map//EN" 
+         "../../base/dtd/map.mod"                                                            
+>%map-type;
+
+<!-- ================================================== -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ================================================== -->
+
+<!ENTITY % mapgroup-d-def  
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Map Group Domain//EN" 
+         "../../base/dtd/mapGroup.mod"                                                       
+>%mapgroup-d-def;
+
+
+<!-- =============== End DITA Map DTD  =================== -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:annotation>
+    <xs:documentation>Intermediate level of redefine to work around XSD redefine limitations</xs:documentation>
+  </xs:annotation>
+
+  <xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.2">
+    <!-- constrain content of <p> element -->
+    <xs:group name="p.content">
+      <xs:choice>
+        <!-- "clear" p.content so we can then override it again in the next level of redefine. -->
+      </xs:choice>            
+    </xs:group>  
+  </xs:redefine>
+
+  <!-- replace "p.content" with KDDA values -->
+  <xs:group name="p-kdda.content">
+    <xs:choice>
+      <xs:sequence maxOccurs="unbounded">      
+        <xs:group ref="b" minOccurs="0"/>
+        <xs:group ref="i" minOccurs="0"/>
+        <xs:group ref="uicontrol" minOccurs="0"/>
+      </xs:sequence>
+    </xs:choice>
+  </xs:group>
+
+</xs:schema> 

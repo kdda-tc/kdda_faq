@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <start>
+    <ref name="map"/>
+  </start>
+
+  <define name="map">
+    <element name="map"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <attribute name="xsi:noNamespaceSchemaLocation">
+        <text/>
+      </attribute>
+      <attribute name="id">
+        <text/>
+      </attribute>
+      <ref name="baseAttrs"/>
+      <optional>
+        <attribute name="xml:lang">
+          <text/>
+        </attribute>
+      </optional>
+      <ref name="title"/>
+      <oneOrMore>
+        <ref name="topicrefs"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="title">
+    <element name="title">
+      <ref name="baseAttrs"/>
+      <text/>
+    </element>
+  </define>
+
+  <define name="topicrefs">
+    <element name="topicref">
+      <interleave>
+        <attribute name="navtitle">
+          <text/>
+        </attribute>
+        <attribute name="class">
+          <text/>
+        </attribute>
+        <attribute name="href">
+          <text/>
+        </attribute>
+        <optional>
+          <attribute name="type">
+            <text/>
+          </attribute>
+        </optional>
+      </interleave>
+      <zeroOrMore>
+        <ref name="topicrefs"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="baseAttrs">
+    <attribute name="class">
+      <text/>
+    </attribute>
+    <attribute name="translate">
+      <text/>
+    </attribute>
+  </define>
+
+</grammar>

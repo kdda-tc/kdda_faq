@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===================================================== -->
+<!--                    HEADER                                                        -->
+<!-- ===================================================== -->
+<!--  MODULE:     KDDA Task DTD                                         -->
+<!--  VERSION:     1.2                                                               -->
+<!--  DATE:           July 2015                                                    -->
+<!--  COPYRIGHT (c) KYOCERA Document Solutions Inc.   -->
+<!--                                                                                            -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!--                    TOPIC ENTITY DECLARATIONS                  -->
+<!-- ===================================================== -->
+
+<!ENTITY % task-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Task//EN" 
+         "task.ent"
+>%task-dec;
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ===================================================== -->
+
+<!ENTITY % hi-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 Highlight Domain//EN" 
+         "../../base/dtd/highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ui-d-dec     
+  PUBLIC "-//OASIS//ENTITIES DITA 1.2 User Interface Domain//EN" 
+         "uiDomain.ent"                                                       
+>%ui-d-dec;
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ===================================================== -->
+
+<!ATTLIST task xmlns:xsi CDATA #IMPLIED
+                           xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+>
+
+<!-- ===================================================== -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ===================================================== -->
+<!--                    One for each extended base element, with
+                           the name of the domain(s) in which the
+                           extension was declared                     -->
+
+<!ENTITY % pre          "pre |
+                         %ui-d-pre;
+                        ">
+<!ENTITY % keyword      "keyword |
+                         %ui-d-keyword;
+                        ">
+<!ENTITY % ph           "ph | 
+                         %hi-d-ph; | 
+                         %ui-d-ph;
+                        ">
+<!ENTITY % term         "term
+                        ">
+<!ENTITY % fig          "fig
+                        ">
+<!ENTITY % dl           "dl
+                        ">
+<!ENTITY % index-base   "index-base
+                        ">
+<!ENTITY % note         "note
+                        ">
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ===================================================== -->
+<!ENTITY % props-attribute-extensions  ""                            >
+<!ENTITY % base-attribute-extensions    ""                            >
+
+<!-- ===================================================== -->
+<!--                    TOPIC NESTING OVERRIDE                     -->
+<!-- ===================================================== -->
+
+<!--                    Redefine the infotype entity to exclude 
+                        other topic types and disallow nesting     -->
+<!ENTITY % task-info-types 
+                        "task"                                       >
+
+<!-- ===================================================== -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ===================================================== -->
+<!--  Must be declared ahead of the DTDs, which puts 
+            @domains first in order                                             -->
+
+<!ENTITY included-domains 
+                          "&task-att;
+                           &hi-d-att; 
+                           &ui-d-att;
+                           &task-constraints; 
+  ">
+
+<!-- ===================================================== -->
+<!--                    CONTENT CONSTRAINT INTEGRATION             -->
+<!-- ===================================================== -->
+
+<!ENTITY % kddaTask-c-def  
+  SYSTEM "../../kddaTaskConstraint/dtd/kddaTaskConstraint.mod">
+%kddaTask-c-def;
+
+<!-- ===================================================== -->
+<!--                    TOPIC ELEMENT INTEGRATION                  -->
+<!-- ===================================================== -->
+
+<!--                    Embed topic to get generic elements        -->
+<!ENTITY % topic-type   PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 Topic//EN" 
+"../../base/dtd/topic.mod"                                                          >
+%topic-type;
+
+<!--                    Embed task to get specific elements        -->
+<!ENTITY % task-typemod PUBLIC 
+"-//OASIS//ELEMENTS DITA 1.2 Task//EN" 
+"task.mod"                                                           >
+%task-typemod;
+
+<!-- ===================================================== -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ===================================================== -->
+
+<!ENTITY % hi-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Highlight Domain//EN" 
+         "../../base/dtd/highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % ui-d-def     
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 User Interface Domain//EN" 
+         "uiDomain.mod"
+>%ui-d-def;
+
+<!-- ================== End DITA Task DTD ================= -->
